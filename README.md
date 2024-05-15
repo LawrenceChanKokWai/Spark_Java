@@ -1,27 +1,54 @@
 # RDD - Reduces
 
-### Testing Spark
-1. A list is created with hard-coded data(s) and add some data into the list.
-<br>
-```
-List<Double> myList = new ArrayList<>();
-myList.add(12.134);
-.......
-.......
-N(times)
-```
-
-2. Spark Configuration, making connection to 
-Spark Cluster and close connection.
-```
-SparkConf conf = new SparkConf();
-JavaSparkContext sc = new JavaSparkContext(conf);
-
-sc.close();
-```
-3. Load the collection of data and turning it into a RDD.
-Initialize it to myRDD.
-```
-JavaRDD myRdd = sc.parallelize(myList);
+### RDD Reduces
+```mermaid
+classDiagram
+    Reducing_Node_One <|-- Node_One
+    Reduced_Node_One <|-- Reducing_Node_One
+    class Driver {
+        function = value 1 + value 2
+    }
+    class Node_One {
+        double value 1
+        double value 2
+        double value 1
+        double value 2
+    }
+    class Reducing_Node_One {
+        double value 3 = value 1 + value 2
+        double value 4 = value 1 + value 2
+    }
+    class Reduced_Node_One {
+        double value 3 + value 4
+    }
 ```
 
+### Example
+```mermaid
+classDiagram
+    Reducing_Node_One <|-- Node_One
+    Reduced_Node_One <|-- Reducing_Node_One
+    class Driver {
+        function = value 1 + value 2
+    }
+    class Node_One {
+        10
+        21
+        31
+        12
+    }
+    class Reducing_Node_One {
+        31
+        33
+    }
+    class Reduced_Node_One {
+        64
+    }
+```
+### Syntax of RDD reduces
+By using Java 8 lambda expression in reduce function.
+```
+myRDD.reduce(
+    (value1, value2) -> value1 + value2
+)
+```

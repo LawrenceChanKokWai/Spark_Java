@@ -1,7 +1,5 @@
 package org.example;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -17,7 +15,7 @@ import java.util.List;
     *
    */
 
-public class Main {
+public class Reduces {
     public static void main(String[] args) {
 
         List<Double> myList = new ArrayList<>();
@@ -26,16 +24,21 @@ public class Main {
         myList.add(5.321);
         myList.add(40.56);
 
-        //Logger.getLogger("org.apache").setLevel(Level.WARN);
-
         SparkConf conf = new SparkConf()
                 .setAppName("starting_spark")
                 .setMaster("local[*]");
-                //.set("spark.driver.bindAddress", "127.0.0.1");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<Double> myRDD = sc.parallelize(myList);
+
+        // Reduces
+        Double result = myRDD.reduce(
+                (valueOne, valueTwo) -> valueOne + valueTwo
+                //Double::sum
+        );
+
+        System.out.println(result);
 
         sc.close();
     }
