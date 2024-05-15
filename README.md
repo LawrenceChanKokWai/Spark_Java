@@ -1,12 +1,4 @@
-# Setting up Spark
-Versions are to be checked in the official webpage on `Downloading` section.
-## References
-- [Spark Official Webpage](https://spark.apache.org/docs/latest/quick-start.html)
-
-### REQUIRED Dependencies
-- [Spark Core](https://mvnrepository.com/artifact/org.apache.spark/spark-core)
-- [Spark Project SQL](https://mvnrepository.com/artifact/org.apache.spark/spark-sql)
-- [Apache Hadoop HDFS](https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs)
+# RDD - Reduces
 
 ### Testing Spark
 1. A list is created with hard-coded data(s) and add some data into the list.
