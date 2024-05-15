@@ -10,13 +10,14 @@ Versions are to be checked in the official webpage on `Downloading` section.
 
 ### Testing Spark
 1. A list is created with hard-coded data(s) and add some data into the list.
-<br>
 ```
+
 List<Double> myList = new ArrayList<>();
 myList.add(12.134);
 .......
 .......
 N(times)
+
 ```
 
 2. Spark Configuration, making connection to 
