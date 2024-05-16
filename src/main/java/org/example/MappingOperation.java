@@ -43,6 +43,18 @@ public class MappingOperation {
         JavaRDD<Double> sqrtRDD = myRDD.map( value ->Math.sqrt(value) );
         sqrtRDD.foreach( value -> System.out.println(value) );
 
+        // ++++++ Getting count ++++++++++++
+        // Besides using the count() method. NOT RECOMMENDED...
+        System.out.println( sqrtRDD.count() );
+
+        // Use map and reduce
+        JavaRDD<Integer> singleSqrtRDD = sqrtRDD.map( value -> 1 );
+        Integer count = singleSqrtRDD.reduce( (value1, value2) -> value1 + value2 );
+        System.out.println(count);
+
+
+
+
         sc.close();
     }
 }

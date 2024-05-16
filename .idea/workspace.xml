@@ -7,7 +7,7 @@
     <list default="true" id="2f64be4e-3182-4946-881b-89457375e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Reduces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MappingOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MappingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MappingOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715741481357</updated>
       <workItem from="1715741482740" duration="616000" />
-      <workItem from="1715820606762" duration="1948000" />
+      <workItem from="1715820606762" duration="3469000" />
     </task>
     <servers />
   </component>
