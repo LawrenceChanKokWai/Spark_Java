@@ -1,54 +1,46 @@
-# RDD - Reduces
+# Mapping Operations
 
-### RDD Reduces
+### Operation
+When RDD is created, the values are immutable. As such,
+a new RDD_SQRT is created in holding the mapped values
 ```mermaid
 classDiagram
-    Reducing_Node_One <|-- Node_One
-    Reduced_Node_One <|-- Reducing_Node_One
-    class Driver {
-        function = value 1 + value 2
+    direction LR
+    RDD --|> sqrtValue
+    sqrtValue --|> RDD_SQRT
+
+    class RDD {
+        double 35
+        double 12
+        double 90
+        double 20
     }
-    class Node_One {
-        double value 1
-        double value 2
-        double value 1
-        double value 2
+    class sqrtValue {
+        sqrt(value)
     }
-    class Reducing_Node_One {
-        double value 3 = value 1 + value 2
-        double value 4 = value 1 + value 2
-    }
-    class Reduced_Node_One {
-        double value 3 + value 4
+    class RDD_SQRT {
+        double 5.916
+        double 3.464
+        double 9.486
+        double 4.472
     }
 ```
 
-### Example
-```mermaid
-classDiagram
-    Reducing_Node_One <|-- Node_One
-    Reduced_Node_One <|-- Reducing_Node_One
-    class Driver {
-        function = value 1 + value 2
-    }
-    class Node_One {
-        10
-        21
-        31
-        12
-    }
-    class Reducing_Node_One {
-        31
-        33
-    }
-    class Reduced_Node_One {
-        64
-    }
+### Syntax
 ```
-### Syntax of RDD reduces
-By using Java 8 lambda expression in reduce function.
+JavaRDD<Double> sqrtRDD = myRDD.map( 
+    value -> Math.sqrt(value) 
+);
 ```
-myRDD.reduce(
-    (value1, value2) -> value1 + value2
-)
+
+### Outputting the result
+The common way is to write the data into a file.
+It could write it to a file system like HDFS, and be distributed
+across multiple nodes in a cluster.
+For testing purposes, we just just a foreach method.
 ```
+sqrtRDD.foreach(
+    value -> System.out.println( value )
+);
+```
+

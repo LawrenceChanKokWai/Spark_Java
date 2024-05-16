@@ -15,14 +15,14 @@ import java.util.List;
     *
    */
 
-public class Reduces {
+public class MappingOperation {
     public static void main(String[] args) {
 
-        List<Double> myList = new ArrayList<>();
-        myList.add(12.231);
-        myList.add(1.54);
-        myList.add(5.321);
-        myList.add(40.56);
+        List<Integer> myList = new ArrayList<>();
+        myList.add(35);
+        myList.add(12);
+        myList.add(90);
+        myList.add(20);
 
         SparkConf conf = new SparkConf()
                 .setAppName("starting_spark")
@@ -30,15 +30,18 @@ public class Reduces {
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        JavaRDD<Double> myRDD = sc.parallelize(myList);
+        JavaRDD<Integer> myRDD = sc.parallelize(myList);
 
-        // Reduces
-        Double result = myRDD.reduce(
+        // RDD
+        Integer result = myRDD.reduce(
                 (valueOne, valueTwo) -> valueOne + valueTwo
                 //Double::sum
         );
-
         System.out.println(result);
+
+        // RDD_SQRT
+        JavaRDD<Double> sqrtRDD = myRDD.map( value ->Math.sqrt(value) );
+        sqrtRDD.foreach( value -> System.out.println(value) );
 
         sc.close();
     }

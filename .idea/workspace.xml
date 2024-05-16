@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2f64be4e-3182-4946-881b-89457375e185" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Reduces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MappingOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "RDD-reduces",
+    "git-widget-placeholder": "mapping-operations",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,8 +44,8 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="Reduces" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Reduces" />
+    <configuration name="MappingOperation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MappingOperation" />
       <module name="spark_java" />
       <option name="VM_PARAMETERS" value="--add-opens java.base/sun.nio.ch=ALL-UNNAMED" />
       <extension name="coverage">
@@ -68,7 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Reduces" />
+        <item itemvalue="Application.MappingOperation" />
       </list>
     </recent_temporary>
   </component>
@@ -81,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715741481357</updated>
       <workItem from="1715741482740" duration="616000" />
+      <workItem from="1715820606762" duration="1948000" />
     </task>
     <servers />
   </component>
