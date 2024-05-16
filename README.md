@@ -44,7 +44,7 @@ sqrtRDD.foreach(
 );
 ```
 
-### Map and reduce
+### Map and reduce ( Counting Items )
 In getting count for the RDD, instead of using count() function.
 We could use the map and reduce pattern.
 1. We make a new RDD and map each element as 1.
