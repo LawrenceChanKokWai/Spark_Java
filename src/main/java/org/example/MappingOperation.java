@@ -48,8 +48,8 @@ public class MappingOperation {
         System.out.println( sqrtRDD.count() );
 
         // Use map and reduce
-        JavaRDD<Integer> singleSqrtRDD = sqrtRDD.map( value -> 1 );
-        Integer count = singleSqrtRDD.reduce( (value1, value2) -> value1 + value2 );
+        JavaRDD<Long> singleSqrtRDD = sqrtRDD.map( value -> 1L );
+        Long count = singleSqrtRDD.reduce( (value1, value2) -> value1 + value2 );
         System.out.println(count);
 
 

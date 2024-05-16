@@ -49,7 +49,7 @@ In getting count for the RDD, instead of using count() function.
 We could use the map and reduce pattern.
 1. We make a new RDD and map each element as 1.
 ```
-JavaRDD<Integer> singleSqrtRDD = sqrtRdd.map( value -> 1 );
+JavaRDD<Long> singleSqrtRDD = sqrtRdd.map( value -> 1L );
 ```
 2. then reduce using function = value1 + value 2.
 ```
